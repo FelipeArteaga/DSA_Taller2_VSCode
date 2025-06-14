@@ -23,14 +23,16 @@ app.config.suppress_callback_exceptions = True
 def load_data():
     # To do: Completar la función
     """
-    Carga datos de producción y pronóstico de energía desde 'datos_energia.csv',
+    Carga datos de producción y pronóstico de energía desde el archivo CSV 'datos_energia.csv',
     convierte la columna de fecha a datetime y la establece como índice.
     """
     # Leer el CSV, parsing de la columna 'fecha' y asignación como índice
-    df = pd.read_csv('datos_energia.csv',
-                     parse_dates=['time'],      # convierte esta columna a datetime
-                     dayfirst=True              # si el formato es DD/MM/AAAA; omitir si es YYYY-MM-DD
-                     )
+    df = pd.read_csv(
+        'datos_energia.csv',
+        parse_dates=['time'],      # convierte esta columna a datetime
+        dayfirst=True              # si el formato es DD/MM/AAAA; omitir si es YYYY-MM-DD
+        )
+    
     df.set_index('time', inplace=True) # establece la columna 'fecha' como índice
     return df
     
