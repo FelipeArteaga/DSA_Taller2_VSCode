@@ -27,13 +27,12 @@ def load_data():
     convierte la columna de fecha a datetime y la establece como índice.
     """
     # Leer el CSV, parsing de la columna 'fecha' y asignación como índice
-    df = pd.read_csv(
-        'datos_energia.csv',
-        parse_dates=['time'],      # convierte esta columna a datetime
-        dayfirst=True              # si el formato es DD/MM/AAAA; omítelo si es YYYY-MM-DD
-    )
+    df = pd.read_csv('datos_energia.csv',
+                     parse_dates=['time'],      # convierte esta columna a datetime
+                     dayfirst=True              # si el formato es DD/MM/AAAA; omitir si es YYYY-MM-DD
+                     )
     df.set_index('time', inplace=True) # establece la columna 'fecha' como índice
-    return df 
+    return df
     
 
 # Cargar datos
