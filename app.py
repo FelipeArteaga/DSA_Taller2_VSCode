@@ -254,3 +254,8 @@ def update_output_div(date, hour, proy):
 # Run the server
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+# Funcion creada para publicar por colaborador Angie Perez
+def prueba(df):
+    print df
