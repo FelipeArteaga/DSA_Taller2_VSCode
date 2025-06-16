@@ -257,5 +257,10 @@ if __name__ == "__main__":
 
 
 # Funcion creada para publicar por colaborador Angie Perez
+#def prueba(df):
+#    print df
+
+#Modificación realizada or Javier C
 def prueba(df):
     print df
+
